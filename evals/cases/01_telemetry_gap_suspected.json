@@ -1,0 +1,77 @@
+{
+  "id": "01_telemetry_gap_suspected",
+  "title": "Synthetic case 1 \u2014 Missing telemetry",
+  "review_status": "synthetic_not_expert_reviewed",
+  "provenance": {
+    "type": "synthetic_demo",
+    "note": "Fictional values created to illustrate behavior. No real plant measurements."
+  },
+  "device_ids": [
+    9001
+  ],
+  "expected_classifications": [
+    "no_fabric_gap_observed",
+    "telemetry_gap_suspected"
+  ],
+  "forbidden_phrases": [
+    "confirmed inverter failure",
+    "confirmed electrical loss",
+    "definitely caused"
+  ],
+  "diagnostic": {
+    "sap_id": "DEMO01",
+    "plant": "Demo plant 1",
+    "day": "2026-01-15",
+    "evidence": [
+      {
+        "id": "E1",
+        "kind": "railway_daily_generation",
+        "scope": "DEMO01",
+        "observed": {
+          "status": "available",
+          "kwh": 980.0
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "synthetic_scenario",
+        "scope": "DEMO_SITE/INV_9001",
+        "observed": {
+          "status": "telemetry_gap_suspected",
+          "synthetic": true,
+          "description": "Missing telemetry"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "scope": "DEMO01",
+        "classification": "no_fabric_gap_observed",
+        "evidence_ids": [
+          "E1"
+        ],
+        "recommended_check": "Check source availability and synchronization."
+      },
+      {
+        "scope": "DEMO_SITE/INV_9001",
+        "classification": "telemetry_gap_suspected",
+        "evidence_ids": [
+          "E2"
+        ],
+        "recommended_check": "Check tag, history and aggregation availability; do not infer equipment failure."
+      }
+    ],
+    "limitations": [
+      "Synthetic demonstration, not a production observation."
+    ]
+  },
+  "tool_results": {
+    "get_reconciliation": {
+      "status": "incomplete",
+      "aioti_kwh": null,
+      "fabric_railway_kwh": 980.0,
+      "difference_kwh": null,
+      "synthetic": true
+    }
+  }
+}

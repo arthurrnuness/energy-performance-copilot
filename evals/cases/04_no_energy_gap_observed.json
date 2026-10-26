@@ -1,0 +1,86 @@
+{
+  "id": "04_no_energy_gap_observed",
+  "title": "Synthetic case 4 \u2014 Available energy",
+  "review_status": "synthetic_not_expert_reviewed",
+  "provenance": {
+    "type": "synthetic_demo",
+    "note": "Fictional values created to illustrate behavior. No real plant measurements."
+  },
+  "device_ids": [
+    9001
+  ],
+  "expected_classifications": [
+    "no_energy_gap_observed",
+    "no_fabric_gap_observed"
+  ],
+  "forbidden_phrases": [
+    "confirmed inverter failure",
+    "confirmed electrical loss",
+    "definitely caused"
+  ],
+  "diagnostic": {
+    "sap_id": "DEMO04",
+    "plant": "Demo plant 4",
+    "day": "2026-01-15",
+    "evidence": [
+      {
+        "id": "E1",
+        "kind": "railway_daily_generation",
+        "scope": "DEMO04",
+        "observed": {
+          "status": "available",
+          "kwh": 980.0
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "synthetic_scenario",
+        "scope": "DEMO_SITE/INV_9001",
+        "observed": {
+          "status": "no_energy_gap_observed",
+          "synthetic": true,
+          "description": "Available energy"
+        }
+      },
+      {
+        "id": "E3",
+        "kind": "daily_aggregate",
+        "scope": "DEMO_SITE/INV_9001",
+        "observed": {
+          "status": "available",
+          "kwh": 1000.0
+        }
+      }
+    ],
+    "findings": [
+      {
+        "scope": "DEMO04",
+        "classification": "no_fabric_gap_observed",
+        "evidence_ids": [
+          "E1"
+        ],
+        "recommended_check": "Check source availability and synchronization."
+      },
+      {
+        "scope": "DEMO_SITE/INV_9001",
+        "classification": "no_energy_gap_observed",
+        "evidence_ids": [
+          "E2"
+        ],
+        "recommended_check": "Check tag, history and aggregation availability; do not infer equipment failure."
+      }
+    ],
+    "limitations": [
+      "Synthetic demonstration, not a production observation."
+    ]
+  },
+  "tool_results": {
+    "get_reconciliation": {
+      "status": "comparable",
+      "aioti_kwh": 1000.0,
+      "fabric_railway_kwh": 980.0,
+      "difference_kwh": 20.0,
+      "synthetic": true
+    }
+  }
+}

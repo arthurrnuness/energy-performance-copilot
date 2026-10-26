@@ -1,0 +1,96 @@
+{
+  "as_of_date": "2026-01-15",
+  "provenance": "Entirely synthetic demonstration data.",
+  "plants": [
+    {
+      "plant": "Demo plant 1",
+      "priority": "investigate",
+      "reconciliation_status": "within_screening_threshold",
+      "mtd": {
+        "fabric_vs_forecast_pct": -14
+      },
+      "last_7_days": {
+        "fabric_vs_forecast_pct": -14,
+        "aioti_vs_forecast_pct": -12,
+        "difference_pct_of_aioti": 2.27,
+        "aioti_kwh": 880.0,
+        "fabric_kwh": 860.0
+      }
+    },
+    {
+      "plant": "Demo plant 2",
+      "priority": "investigate",
+      "reconciliation_status": "within_screening_threshold",
+      "mtd": {
+        "fabric_vs_forecast_pct": -11
+      },
+      "last_7_days": {
+        "fabric_vs_forecast_pct": -11,
+        "aioti_vs_forecast_pct": -9,
+        "difference_pct_of_aioti": 2.2,
+        "aioti_kwh": 910.0,
+        "fabric_kwh": 890.0
+      }
+    },
+    {
+      "plant": "Demo plant 3",
+      "priority": "data_review",
+      "reconciliation_status": "data_gap",
+      "mtd": {
+        "fabric_vs_forecast_pct": null
+      },
+      "last_7_days": {
+        "fabric_vs_forecast_pct": null,
+        "aioti_vs_forecast_pct": -5,
+        "difference_pct_of_aioti": null,
+        "aioti_kwh": 950.0,
+        "fabric_kwh": null
+      }
+    },
+    {
+      "plant": "Demo plant 4",
+      "priority": "routine",
+      "reconciliation_status": "data_gap",
+      "mtd": {
+        "fabric_vs_forecast_pct": -4
+      },
+      "last_7_days": {
+        "fabric_vs_forecast_pct": -4,
+        "aioti_vs_forecast_pct": null,
+        "difference_pct_of_aioti": null,
+        "aioti_kwh": null,
+        "fabric_kwh": 960.0
+      }
+    },
+    {
+      "plant": "Demo plant 5",
+      "priority": "routine",
+      "reconciliation_status": "review_discrepancy",
+      "mtd": {
+        "fabric_vs_forecast_pct": 4
+      },
+      "last_7_days": {
+        "fabric_vs_forecast_pct": 4,
+        "aioti_vs_forecast_pct": -7,
+        "difference_pct_of_aioti": -11.83,
+        "aioti_kwh": 929.9999999999999,
+        "fabric_kwh": 1040.0
+      }
+    },
+    {
+      "plant": "Demo plant 6",
+      "priority": "routine",
+      "reconciliation_status": "within_screening_threshold",
+      "mtd": {
+        "fabric_vs_forecast_pct": 3
+      },
+      "last_7_days": {
+        "fabric_vs_forecast_pct": 3,
+        "aioti_vs_forecast_pct": 4,
+        "difference_pct_of_aioti": 0.96,
+        "aioti_kwh": 1040.0,
+        "fabric_kwh": 1030.0
+      }
+    }
+  ]
+}

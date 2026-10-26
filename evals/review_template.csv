@@ -1,0 +1,6 @@
+case_id,reviewer,review_date,claim_supported,tool_choice_useful,notes
+01_telemetry_gap_suspected,,,,,
+02_missing_tag,,,,,
+03_fabric_source_gap,,,,,
+04_no_energy_gap_observed,,,,,
+05_derived_energy_gap,,,,,

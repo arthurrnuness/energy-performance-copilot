@@ -1,0 +1,46 @@
+# Study copy contents
+
+The production project is not modified by this export. Credentials, source measurements, device-assignment seed functions and runtime files are excluded.
+
+- `.env.example`
+- `.gitignore`
+- `README.md`
+- `aioti_connection.py`
+- `copilot/__init__.py`
+- `copilot/agent.py`
+- `copilot/app.py`
+- `copilot/daily_energy.py`
+- `copilot/diagnostics.py`
+- `copilot/evaluation.py`
+- `daily_generation_sync.py`
+- `docs/ARCHITECTURE.md`
+- `docs/CASE_STUDY.md`
+- `docs/FILES_CHANGED.md`
+- `docs/STUDY_GUIDE.md`
+- `energy_agent.py`
+- `evals/cases/01_telemetry_gap_suspected.json`
+- `evals/cases/02_missing_tag.json`
+- `evals/cases/03_fabric_source_gap.json`
+- `evals/cases/04_no_energy_gap_observed.json`
+- `evals/cases/05_derived_energy_gap.json`
+- `evals/demo_portfolio.json`
+- `evals/review_template.csv`
+- `fabric_connection.py`
+- `generation_performance.py`
+- `investigation_tools.py`
+- `portfolio_comparison.py`
+- `postgres_connection.py`
+- `postgres_sync.py`
+- `requirements-copilot.txt`
+- `run_generation_sync.py`
+- `tests/conftest.py`
+- `tests/test_copilot_agent.py`
+- `tests/test_copilot_app.py`
+- `tests/test_copilot_diagnostics.py`
+- `tests/test_daily_generation_sync.py`
+- `tests/test_energy_reconciliation.py`
+- `tests/test_generation_sync.py`
+- `tests/test_portfolio_comparison.py`
+- `web/app.js`
+- `web/index.html`
+- `web/style.css`

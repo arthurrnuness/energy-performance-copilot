@@ -1,0 +1,68 @@
+{
+  "id": "03_fabric_source_gap",
+  "title": "Synthetic case 3 \u2014 Missing Fabric record",
+  "review_status": "synthetic_not_expert_reviewed",
+  "provenance": {
+    "type": "synthetic_demo",
+    "note": "Fictional values created to illustrate behavior. No real plant measurements."
+  },
+  "device_ids": [
+    9001
+  ],
+  "expected_classifications": [
+    "fabric_source_gap"
+  ],
+  "forbidden_phrases": [
+    "confirmed inverter failure",
+    "confirmed electrical loss",
+    "definitely caused"
+  ],
+  "diagnostic": {
+    "sap_id": "DEMO03",
+    "plant": "Demo plant 3",
+    "day": "2026-01-15",
+    "evidence": [
+      {
+        "id": "E1",
+        "kind": "railway_daily_generation",
+        "scope": "DEMO03",
+        "observed": {
+          "status": "missing_or_invalid",
+          "kwh": null
+        }
+      },
+      {
+        "id": "E2",
+        "kind": "synthetic_scenario",
+        "scope": "DEMO_SITE/INV_9001",
+        "observed": {
+          "status": "fabric_source_gap",
+          "synthetic": true,
+          "description": "Missing Fabric record"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "scope": "DEMO03",
+        "classification": "fabric_source_gap",
+        "evidence_ids": [
+          "E1"
+        ],
+        "recommended_check": "Check source availability and synchronization."
+      }
+    ],
+    "limitations": [
+      "Synthetic demonstration, not a production observation."
+    ]
+  },
+  "tool_results": {
+    "get_reconciliation": {
+      "status": "incomplete",
+      "aioti_kwh": null,
+      "fabric_railway_kwh": null,
+      "difference_kwh": null,
+      "synthetic": true
+    }
+  }
+}
